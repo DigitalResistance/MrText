@@ -9,15 +9,34 @@ echo.
 echo   =================
 echo  1. Start the game
 echo =================
-echo   =========
-echo  2. Leave 
 echo =========
+echo  2. Leave 
+echo  =========
+echo  ==========
+echo 3. About
+echo ==========
 echo.
 set /p input0=Enter:
 
 if %input0% equ 1 goto Begin
+if %input0% equ 3 goto About
 if %input0% equ 2 exit
 goto startup
+
+
+:About
+cls
+echo Welcome to About.
+echo.
+echo About Mr Text.
+echo Mr Text Based Game made to be played on CMD for fun, Mr Text is a adventure game where you have to save CMD Land from being destroyed by Mr. KCMD. Game is still in Early Development so you can't play At The Moment.
+echo.
+echo ==========
+echo  4. Back
+echo ==========
+set /p input0=Enter:
+
+if %input0% equ 4 goto startup
 
 :Begin
 cls
@@ -72,3 +91,4 @@ pause >nul
 
 :play
 cls
+pause >nul
