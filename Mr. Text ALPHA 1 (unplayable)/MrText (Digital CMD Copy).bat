@@ -1,6 +1,6 @@
 @echo off
 TITLE Mr. Text
-color e
+color 9
 
 :startup
 cls
@@ -23,6 +23,23 @@ if %input0% equ 3 goto About
 if %input0% equ 2 exit
 goto startup
 
+:Help
+cls
+echo Welcome To Help
+echo.
+echo Error Codes List:
+echo.
+echo 1. Error Code x7099-88
+echo Description: Error Code x7099-88 is an Error which occurs when the game is in development, the code basically means that he game is in VERY EARLY Development and the game hasn't got any levels yet.
+echo.
+echo 2. Error Code x8900-44
+echo Description: Error Code x8900-44 is an error when the multiplayer servers are offline.
+echo.
+echo Type "0" to goto the menu.
+echo.
+set /p input0=Enter:
+
+if %input0% equ 0 goto startup
 
 :About
 cls
@@ -91,4 +108,34 @@ pause >nul
 
 :play
 cls
+echo ERROR
+echo Code x7099-88
+echo MrText dosen't support the kernel version of your Operating System yet.
+echo You can research this error code on the MrText Wiki on Github
+echo.
+echo Where would you like to go?
+echo ==========
+echo 5. Help
+echo  ========
+echo.
+echo ==========
+echo 2. Leave
+echo  ========
+echo.
+set /p input0=Enter:
+
+if %input0% equ 5 goto Help
+if %input0% equ 2 exit
+pause >nul
+
+:multiplayer
+cls
+echo ======================
+echo : ERROR Code x8900-44 :
+echo :                     :
+echo : Servers could be    :
+echo : offline             :
+echo ======================
+echo.
+echo Press any key to continue...
 pause >nul
